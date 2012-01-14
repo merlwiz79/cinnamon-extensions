@@ -1,0 +1,8 @@
+{
+ "uuid": "@uuid@",
+ "name": "Trash applet",
+ "description": "A Trash applet for panel -- hidden when trash is empty",
+ "cinnamon-version": [ "@cinnamon_current@" ],
+ "localedir": "@LOCALEDIR@",
+ "url": "@url@"
+}

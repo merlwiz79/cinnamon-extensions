@@ -1,0 +1,8 @@
+{
+ "uuid": "@uuid@",
+ "name": "Auto Move Windows",
+ "description": "Move applications to specific workspaces when they create windows",
+ "cinnamon-version": [ "@cinnamon_current@" ],
+ "localedir": "@LOCALEDIR@",
+ "url": "@url@"
+}

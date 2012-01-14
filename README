@@ -1,0 +1,51 @@
+Cinnamon is not API stable, extensions work only against a very
+specific version of the cinnamon, usually the same as this package (see
+"configure --version").
+
+Extensions
+==========
+
+auto-move-windows
+
+  Lets you manage your workspaces more easily, assigning a specific workspace to
+  each application as soon as it creates a window, in a manner configurable with a
+  GSettings key.
+
+dock
+
+  Shows a dock-style task switcher on the right side of the screen.
+
+drive-menu
+  Shows a status menu for rapid unmount and power off of external storage devices
+  (i.e. pendrives)
+
+example
+
+  A minimal example illustrating how to write extensions.
+
+places-menu
+
+  Shows a status Indicator for navigating to Places.
+
+trash
+
+   This extension allows emptying trash and opening the trash folder from the panel. 
+   It hides completely when the Trash is empty.
+
+windowsNavigator
+
+  Allow keyboard selection of windows and workspaces in overlay mode.
+
+xrandr-indicator
+
+  Replace the GTK+ based indicator from gnome-settings-daemon with
+  a native one. Lets the user rotate the laptop monitor and open
+  display preferences quickly.
+
+License
+=======
+Cinnamon Extensions are distributed under the terms of the GNU General Public License,
+version 2 or later. See the COPYING file for details.
+Individual extensions may be licensed under different terms, see each source
+file for details.
+

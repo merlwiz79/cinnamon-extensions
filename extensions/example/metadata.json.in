@@ -1,0 +1,8 @@
+{
+ "uuid": "@uuid@",
+ "name": "Hello, World!",
+ "description": "An example extension to show how it works. Shows Hello, world when clicking on the top panel.",
+ "cinnamon-version": [ "@cinnamon_current@" ],
+ "localedir": "@LOCALEDIR@",
+ "url": "@url@"
+}

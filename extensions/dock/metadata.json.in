@@ -1,0 +1,8 @@
+{
+"uuid": "@uuid@",
+"name": "Dock",
+"description": "A dock for the Cinnamon -- displays favorite and running applications",
+"cinnamon-version": [ "@cinnamon_current@" ],
+"localedir": "@LOCALEDIR@",
+"url": "@url@"
+}
