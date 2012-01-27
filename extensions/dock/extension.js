@@ -19,7 +19,7 @@ const PopupMenu = imports.ui.popupMenu;
 const Search = imports.ui.search;
 const Tweener = imports.ui.tweener;
 const Workspace = imports.ui.workspace;
-//const AppDisplay = imports.ui.appDisplay;
+const AppDisplay = imports.ui.appDisplay;
 const AltTab = imports.ui.altTab;
 
 const Gettext = imports.gettext.domain('cinnamon-extensions');
@@ -730,8 +730,8 @@ DockIcon.prototype = {
         let button = event.get_button();
         if (button == 1) {
             this._removeMenuTimeout();
-            //this._menuTimeoutId = Mainloop.timeout_add(AppDisplay.MENU_POPUP_TIMEOUT, Lang.bind(this, function() {
-            //    this.popupMenu();
+            this._menuTimeoutId = Mainloop.timeout_add(AppDisplay.MENU_POPUP_TIMEOUT, Lang.bind(this, function() {
+                this.popupMenu();
             }));
         } else if (button == 3) {
             this.popupMenu();
