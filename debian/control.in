@@ -4,6 +4,7 @@ Priority: extra
 Maintainer: merlwiz79 <mintmerlwiz79@gmail.com>
 Build-Depends: debhelper (>= 7),
  cdbs,
+ cinnamon (>= 1.2.0),
  gnome-pkg-tools,
  intltool,
  libglib2.0-dev,
@@ -15,7 +16,7 @@ Homepage: https://github.com/merlwiz79/cinnamon-extensions
 
 Package: cinnamon-extensions-common
 Architecture: all
-Depends: ${misc:Depends}, cinnamon, cinnamon-session, cinnamon-settings
+Depends: ${misc:Depends}, cinnamon (>= 1.2.0), cinnamon-session, cinnamon-settings
 Description: Extensions to extend functionality of Cinnamon (common files)
  This package contains common files to be used by other individial
  extension packages.
@@ -64,11 +65,3 @@ Conflicts: cinnamon-extension-trash
 Description: Trash management extension for Cinnamon
  This extension allows emptying trash and opening the trash folder
  from the panel. It hides completely when the Trash is empty.
-
-Package: cinnamon-extensions-xrandr-indicator
-Architecture: all
-Depends: ${misc:Depends}, cinnamon-extensions-common, gir1.2-gnomedesktop-3.0
-Description: XRandr extension to Cinnamon
- This extension adds an xrandr indicator to the Cinnamon system tray
- hence allowing the user to easily change monitor resolutions, rotate
- the desktop, manage different screens, and a lot more.

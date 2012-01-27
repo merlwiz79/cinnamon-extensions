@@ -1,5 +1,5 @@
 AC_PREREQ(2.63)
-AC_INIT([cinnamon-extensions],[1.1.3],[https://github.com/merlwiz79/cinnamon-extensions/issues])
+AC_INIT([cinnamon-extensions],[1.2.0],[https://github.com/merlwiz79/cinnamon-extensions/issues])
 
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([config])
@@ -18,12 +18,17 @@ PKG_PROG_PKG_CONFIG([0.22])
 
 GLIB_GSETTINGS
 
+AC_PATH_PROG(CINNAMON_BINARY_PATH, cinnamon, [], [${prefix}/bin])
+if ! test -x "$CINNAMON_BINARY_PATH"; then
+	AC_MSG_ERROR(cinnamon was not installed to ${prefix})
+fi
+
 dnl keep this in alphabetic order
 dnl by default, install only extensions that do not change completely the cinnamon experience,
 dnl that don't require GSettings and that don't require external packages for typelibs
 dnl (so basically only menus, status icons, search providers, overview tabs, message tray sources, etc.)
 DEFAULT_EXTENSIONS="dock drive-menu places-menu trash windowsNavigator"
-ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example xrandr-indicator"
+ALL_EXTENSIONS="$DEFAULT_EXTENSIONS auto-move-windows example"
 AC_SUBST(ALL_EXTENSIONS, [$ALL_EXTENSIONS])
 AC_ARG_ENABLE([extensions],
 	[AS_HELP_STRING([--enable-extensions],[Space separated list of extensions to enable.
@@ -69,8 +74,8 @@ AC_CONFIG_FILES([
   extensions/places-menu/Makefile
   extensions/trash/Makefile
   extensions/windowsNavigator/Makefile
-  extensions/xrandr-indicator/Makefile
   extensions/Makefile
+  files/Makefile
   Makefile
   po/Makefile.in
 ])

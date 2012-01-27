@@ -5,4 +5,3 @@ extensions/dock/org.cinnamon.extensions.dock.gschema.xml.in
 extensions/example/extension.js
 extensions/trash/extension.js
 extensions/windowsNavigator/extension.js
-extensions/xrandr-indicator/extension.js

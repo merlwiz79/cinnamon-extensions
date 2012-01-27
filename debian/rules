@@ -7,3 +7,9 @@ include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 DEB_CONFIGURE_EXTRA_FLAGS := --enable-extensions=all
+
+binary-post-install/cinnamon-extensions-common::
+	if [ -f $(CURDIR)/debian/tmp/usr/share/cinnamon/js/ui/appDisplay.js ]; then \
+		cp $(CURDIR)/debian/tmp/usr/share/cinnamon/js/ui/appDisplay.js $(CURDIR)/debian/cinnamon-extensions-common/usr/share/cinnamon/js/ui/appDisplay.js; \
+	fi; \
+

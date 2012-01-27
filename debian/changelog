@@ -1,3 +1,9 @@
+cinnamon-extensions (1.2.0) oneiric; urgency=medium
+
+  * Update for Cinnamon 1.2.0 compatibility
+
+ -- merlwiz79 <mintmerlwiz79@gmail.com>  Thu, 26 Jan 2012 20:28:00 -0600
+
 cinnamon-extensions (1.1.3) oneiric; urgency=medium
 
   * Initial release
