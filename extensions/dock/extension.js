@@ -84,6 +84,8 @@ function hideDock_size () {
                    }
                    this.actor.set_position (position_x,monitor.y+(monitor.height-height)/2);
                    this.actor.set_size(width,height);
+                   // Force the layout manager to update the input region
+                   Main.layoutManager._chrome.updateRegions()
               },
        });
        hideDock=true;
@@ -113,6 +115,8 @@ function showDock_size () {
                 }
                 this.actor.set_position (position_x, monitor.y+(monitor.height-height)/2);
                 this.actor.set_size(width,height);
+                   // Force the layout manager to update the input region
+                   Main.layoutManager._chrome.updateRegions()
              }
      });
      hideDock=false;
@@ -133,7 +137,11 @@ function showEffectAddItem_size () {
                 height: height,
                 width: width,
                 time: autohide_animation_time,
-                transition: 'easeOutQuad'
+                transition: 'easeOutQuad',
+                onUpdate: function() {
+                    // Force the layout manager to update the input region
+                    Main.layoutManager._chrome.updateRegions()
+                }
         });
 }
 
@@ -164,7 +172,11 @@ function hideDock_scale () {
                        width: width,
                        scale_x: 0.025,
                        time: autohide_animation_time,
-                       transition: 'easeOutQuad'
+                       transition: 'easeOutQuad',
+                       onUpdate: function() {
+                           // Force the layout manager to update the input region
+                           Main.layoutManager._chrome.updateRegions()
+                       }
                      });
                hideDock=true;
         }
@@ -192,7 +204,11 @@ function showDock_scale () {
                 width: width,
                 scale_x: 1,
                 time: autohide_animation_time,
-                transition: 'easeOutQuad'
+                transition: 'easeOutQuad',
+                onUpdate: function() {
+                    // Force the layout manager to update the input region
+                    Main.layoutManager._chrome.updateRegions()
+                }
         });
         hideDock=false;
 }
@@ -214,7 +230,11 @@ function initShowDock_scale () {
                        x: primary.x-2*this._spacing,
                        y: primary.y + (primary.height-height)/2,
                        time: autohide_animation_time * 3,
-                       transition: 'easeOutQuad'
+                       transition: 'easeOutQuad',
+                       onUpdate: function() {
+                           // Force the layout manager to update the input region
+                           Main.layoutManager._chrome.updateRegions()
+                       }
                    });
                    break;
                 case PositionMode.RIGHT:
@@ -225,14 +245,22 @@ function initShowDock_scale () {
                       x: primary.x + primary.width-this._item_size- 2*this._spacing,
                       y: primary.y + (primary.height-height)/2,
                       time: autohide_animation_time * 3,
-                      transition: 'easeOutQuad'
+                      transition: 'easeOutQuad',
+                      onUpdate: function() {
+                          // Force the layout manager to update the input region
+                          Main.layoutManager._chrome.updateRegions()
+                      }
                    });
         }
         Tweener.addTween(this.actor,{
            scale_x: 1,
            scale_y: 1,
            time: autohide_animation_time * 3,
-           transition: 'easeOutQuad'
+           transition: 'easeOutQuad',
+           onUpdate: function() {
+               // Force the layout manager to update the input region
+               Main.layoutManager._chrome.updateRegions()
+           }
         });
         hideDock=false;
 }
@@ -247,7 +275,11 @@ function showEffectAddItem_scale () {
                 height: height,
                 width: width,
                 time: autohide_animation_time,
-                transition: 'easeOutQuad'
+                transition: 'easeOutQuad',
+                onUpdate: function() {
+                    // Force the layout manager to update the input region
+                    Main.layoutManager._chrome.updateRegions()
+                }
         });
 }
 
@@ -277,7 +309,11 @@ function hideDock_move () {
                        width: width,
                        height: height,
                        time: autohide_animation_time,
-                       transition: 'easeOutQuad'
+                       transition: 'easeOutQuad',
+                       onUpdate: function() {
+                           // Force the layout manager to update the input region
+                           Main.layoutManager._chrome.updateRegions()
+                       }
                      });
                hideDock=true;
         }
@@ -304,7 +340,11 @@ function showDock_move () {
                 width: width,
                 height: height,
                 time: autohide_animation_time,
-                transition: 'easeOutQuad'
+                transition: 'easeOutQuad',
+                onUpdate: function() {
+                    // Force the layout manager to update the input region
+                    Main.layoutManager._chrome.updateRegions()
+                }
         });
         hideDock=false;
 }
@@ -323,7 +363,11 @@ function showEffectAddItem_move () {
                 height: height,
                 width: width,
                 time: autohide_animation_time,
-                transition: 'easeOutQuad'
+                transition: 'easeOutQuad',
+                onUpdate: function() {
+                    // Force the layout manager to update the input region
+                    Main.layoutManager._chrome.updateRegions()
+                }
         });
 }
 
